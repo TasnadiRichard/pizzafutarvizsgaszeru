@@ -1,7 +1,7 @@
 <?php
     header('Content-Type: application/json; charset=UTF-8');
     header('Acces-Control-Allow-Origin: *');
-    header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
+    header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
     $keresFutar = explode('/', $_SERVER['QUERY_STRING']);
     if($keresFutar[0] === "futarkarban"){
         require_once 'futarbackend/index.php';

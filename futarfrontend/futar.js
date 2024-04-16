@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded",function(){
 
 
     createButton.addEventListener("click", async function () {
-        const baseUrl ="http://localhost/";
+        const baseUrl ="http://localhost/pizzafutarvizsgaszeru/index.php?futarkarban";
         const formdata = new FormData(document.getElementById("fnev"));
         let options = {
             method: "POST",
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded",function(){
     });
 
     deleteButton.addEventListener("click", async function () {
-        const baseUrl = `http://localhost//${document.getElementById("fazon").value}`;
+        const baseUrl = `http://localhost/pizzafutarvizsgaszeru/index.php?futarkarban//${document.getElementById("fazon").value}`;
         let options = {
             method: "DELETE",
         };
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded",function(){
     });
 
     updateButton.addEventListener("click", async function(){
-        const baseUrl = "http://localhost/";
+        const baseUrl = "http://localhost/pizzafutarvizsgaszeru/index.php?futarkarban";
         let object = {
             fazon: document.getElementById("fazon").value,
             fnev: document.getElementById("fnev").value,
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded",function(){
     });
 
     readButton.addEventListener("click", async function(){
-        const baseUrl = "http://localhost/";
+        const baseUrl = "http://localhost/pizzafutarvizsgaszeru/index.php?futarkarban";
         let response = await fetch(baseUrl);
         if(response.ok){
             let data = await response.json();
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded",function(){
 });
 
 function adatBetoltes(fazon, fnev, ftel){
-    let baseUrl='http://localhost/' + nev;
+    let baseUrl='http://localhost/pizzafutarvizsgaszeru/index.php?futarkarban' + nev;
     let options = {
         method: 'GET',
         mode: "cors"

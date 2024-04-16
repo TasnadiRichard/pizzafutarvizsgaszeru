@@ -1,10 +1,9 @@
 <?php
 
-//-- osszes futar adatai JSON-ban
 $sql = '';
-if (count($KeresFutar) > 1) {
-    if (is_int(intval($KeresFutar[1]))) {
-        $sql = 'SELECT * FROM futar WHERE fazon=' . $KeresFutar[1];
+if (count($keresFutar) > 1) {
+    if (is_int(intval($keresFutar[1]))) {
+        $sql = 'SELECT * FROM futar WHERE fazon=' . $keresFutar[1];
     } else {
         http_response_code(404);
         echo 'Nincs ilyet futár';
@@ -17,7 +16,7 @@ $result = $connection->query($sql);
 if ($result->num_rows > 0) {
     $futarkarban = array();
     while ($row = $result->fetch_assoc()) {
-        $futarkarban = $row;
+        $futarkarban[] = $row;
     }
     http_response_code(200);
     echo json_encode($futarkarban);

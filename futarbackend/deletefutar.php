@@ -1,9 +1,9 @@
 <?php
 
 $sql = '';
-if (count($KeresFutar) > 1) {
-    if (is_int(intval($KeresFutar[1]))) {
-        $sql = 'DELETE FROM futar WHERE fazon='. $KeresFutar[1];
+if (count($keresFutar) > 1) {
+    if (is_int(intval($keresFutar[1]))) {
+        $sql = 'DELETE FROM futar WHERE fazon='. $keresFutar[1];
     }
 } else {
     http_response_code(404);

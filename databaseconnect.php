@@ -1,5 +1,5 @@
 <?php
-$connection = new mysqli("localhost", " ", "pizza");
+$connection = new mysqli("localhost","root", "", "pizza");
 if ($connection->connect_error) {
     die("Connect failed: " . $connection->connect_error);
 }
